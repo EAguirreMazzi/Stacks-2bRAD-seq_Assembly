@@ -15,4 +15,4 @@ POP_OUT=$SCRATCH_DIR/populations/n3/raw_full
 /storage1/fs1/christine.e.edwards/Active/aguirre/stacks/stacks-2.68/tsv2bam -P $SCRATCH_DIR -M $POPMAP -t 16
 /storage1/fs1/christine.e.edwards/Active/aguirre/stacks/stacks-2.68/gstacks -P $SCRATCH_DIR -M $POPMAP --kmer-length 21 --max-debruijn-reads 500 --min-kmer-cov 1 -t 16
 mkdir -p $POP_OUT
-/storage1/fs1/christine.e.edwards/Active/aguirre/stacks/stacks-2.68/populations -P $SCRATCH_DIR -M $POPMAP -O $POP_OUT --no-hap-exports --vcf-all -t 16
+/storage1/fs1/christine.e.edwards/Active/aguirre/stacks/stacks-2.68/populations -P $SCRATCH_DIR -M $POPMAP -O $POP_OUT --no-hap-exports --vcf -t 32
