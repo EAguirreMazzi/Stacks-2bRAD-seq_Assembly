@@ -91,7 +91,7 @@ mv_cmd <- c("mkdir -p before_downsampling_reads",paste0("mv ",db_downsample$Sequ
 seqtk_command<- paste0("seqtk sample -s100 ",
     db_downsample$Sequence_ID,".fastq.gz ", db_downsample$fraction_to_keep,
     " | gzip > /storage1/fs1/christine.e.edwards/Active/weinmannia/data/all_raw/normalized/", db_downsample$Sequence_ID, ".fastq.gz")
-#writeClipboard(seqtk_command)
+writeClipboard(seqtk_command)
 #put on a script and run:
 #bsub -G compute-christine.e.edwards -q general -a "docker(staphb/seqtk)" -R "rusage[mem=16GB]" ./normalize.sh
 #NOW samples are ready for ustacks
