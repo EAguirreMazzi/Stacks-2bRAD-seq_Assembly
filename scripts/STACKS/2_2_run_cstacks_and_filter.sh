@@ -110,5 +110,5 @@ cut -f 5 catalog.occurrence.txt | sort -n | uniq -c
 zcat catalog.tags.tsv.gz | cut -f 4 > catalog.tags.column4.txt
 sed -i 's/_[0-9]*//g' catalog.tags.column4.txt
 sed 's/,/\n/g' catalog.tags.column4.txt | sort -n | uniq -c > loci_per_sample.txt
-#explore this table (make more explicit next time so ID is hardcoded matched)
+#explore this table (make more explicit next time so ID match is hardcoded)
 paste <(cat loci_per_sample.txt) <(zcat ../catalog.sample_list.tsv.gz | grep -v "#")

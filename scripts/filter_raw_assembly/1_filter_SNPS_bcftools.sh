@@ -96,5 +96,6 @@ bcftools stats -s - ${prefix}.vcf.gz > ${prefix}.stats
 # bcftools index populations_n4.snps.vcf.gz
 bsub -G compute-christine.e.edwards -q general -M 16GB -R "rusage[mem=16GB]" -a "docker(staphb/bcftools)" "./bcftools_filters.sh populations_n3.snps.vcf.gz all_n3_wDP_AD0001"
 bsub -G compute-christine.e.edwards -q general -M 16GB -R "rusage[mem=16GB]" -a "docker(staphb/bcftools)" "./bcftools_filters.sh populations_n4.snps.vcf.gz all_n4_wDP_AD0001"
+bsub -G compute-christine.e.edwards -q general -M 16GB -R "rusage[mem=16GB]" -a "docker(staphb/bcftools)" "./bcftools_filters.sh populations_n5.snps.vcf.gz all_n5_wDP_AD0001"
 #download from cluster all assembly outputs
 #scp -r a.eduardo@compute1-client-1.ris.wustl.edu:/storage1/fs1/christine.e.edwards/Active/weinmannia/assembly/populations .
